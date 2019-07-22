@@ -5,6 +5,15 @@ spring:
       resourceserver:
         jwt:
           jwk-set-uri: http://localhost:8769/uaa/.well-known/jwks.json
+  rabbitmq:
+    virtual-host: micro-vh
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+    queue:
+       name: q.dev.prod.price
+
   cloud:
     config:
       discovery:
